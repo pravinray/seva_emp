@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "first_name": "Pradip",
+        "last_name": "Dhakal",
+        "contact_no": {
+            "personal_number": 9846751280,
+            "work_number": 9846751280
+        },
+        "date_of_birth":{
+            "year": 1998,
+            "month": 6,
+            "day": 23
+        },
+        "address": {
+            "permanent": "Pokhara",
+            "temporary": "Chabahil, Kathmandu"
+        },
+        "job_title": "Software engineer",
+        "current_project": [
+            "S2S",
+            "Seva App"
+        ]
+
+    }
+]
