@@ -21,6 +21,10 @@
             "S2S",
             "Seva App"
         ],
-        "img_src": "file.seva.com/assets/images/pradip-dhakal.jpg"
+        "img_src": "file.seva.com/assets/images/pradip-dhakal.jpg",
+        "email": [
+            "dhpradeep25@gmail.com",
+            "pdhakal@sevadev.com"
+        ]
     }
 ]
