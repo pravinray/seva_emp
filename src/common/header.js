@@ -1,12 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-export default function Header({ title }) {
+import { Config } from '../common/config'
 
+export default function Header({ title }) {
     return (
         <View style={styles.header}>
             <View style={styles.headerTitle}>
-                <Text style={styles.headerText}>SevaDev | {title} </Text>
+                <Text style={styles.headerText}>{Config.settings.app_title} | {title} </Text>
             </View>
         </View>
     )
