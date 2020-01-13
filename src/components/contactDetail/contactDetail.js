@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text, Image, Linking, Platform, Alert } from 'react-native'
+import {
+    StyleSheet,
+    View,
+    Text,
+    Image,
+    Linking,
+    Platform,
+    Alert,
+    Clipboard,
+    ToastAndroid,
+    Button
+} from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Config } from '../../common/config'
 import { ScrollView } from 'react-native-gesture-handler'
-import { globalStyles } from '../../styles/global'
+import { globalStyles, globalColor } from '../../styles/global'
 
 class ContactDetails extends Component {
 
@@ -41,12 +52,29 @@ class ContactDetails extends Component {
             })
             .catch(err => console.log(err))
     }
+    makeMail = (email) => {
+        let emailAddress = `mailto:${email}`
+        Linking.canOpenURL(emailAddress)
+            .then(supported => {
+                if (!supported) {
+                    Alert.alert("Email address is not valid")
+                } else {
+                    return Linking.openURL(emailAddress)
+                }
+            })
+            .catch(err => console.log(err))
+    }
+    CopyToClipboard = (str) => {
+        Clipboard.setString(`${str}`)
+        ToastAndroid.show('Copied!', ToastAndroid.SHORT);
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Text style={styles.userProfile}>USER PROFILE</Text>
-                    <MaterialCommunityIcons name="close" size={30} style={styles.closeIcon} />
+                    <MaterialCommunityIcons onPress={() => this.changeNavigation} name="close" size={30} style={styles.closeIcon} />
                 </View>
                 <ScrollView style={styles.body}>
                     <View style={styles.profilePictureGrid}>
@@ -63,7 +91,9 @@ class ContactDetails extends Component {
                     </View>
                     <View style={styles.phoneGrid}>
                         <Text style={{ ...globalStyles.boldText, ...styles.fieldMainTitle }}>Phone Number Details:</Text>
-                        <View style={globalStyles.horiZontalRow} />
+                        <View style={globalStyles.horiZontalRow}>
+                            <View style={globalColor("53")}></View>
+                        </View>
                         <View style={styles.fieldBox}>
                             <Text style={styles.fieldTitle}>Work Number:</Text>
                             <Text style={styles.fieldValue}>+977-9846751280</Text>
@@ -79,7 +109,9 @@ class ContactDetails extends Component {
                     </View>
                     <View style={styles.addressGrid}>
                         <Text style={{ ...globalStyles.boldText, ...styles.fieldMainTitle }}>Address Details:</Text>
-                        <View style={globalStyles.horiZontalRow} />
+                        <View style={globalStyles.horiZontalRow}>
+                            <View style={globalColor("40")}></View>
+                        </View>
                         <View style={styles.fieldBox}>
                             <Text style={styles.fieldTitle}>Permanent Address:</Text>
                             <Text style={styles.fieldValue}>Pokhara, Nepal</Text>
@@ -91,11 +123,35 @@ class ContactDetails extends Component {
                     </View>
                     <View style={styles.dobGrid}>
                         <Text style={{ ...globalStyles.boldText, ...styles.fieldMainTitle }}>Date of Birth Details:</Text>
-                        <View style={globalStyles.horiZontalRow} />
+                        <View style={globalStyles.horiZontalRow}>
+                            <View style={globalColor("50")}></View>
+                        </View>
                         <View style={styles.fieldBox}>
                             <Text style={styles.fieldTitle}>Date of Birth:</Text>
                             <Text style={styles.fieldValue}>23 / Jun / 1998</Text>
                         </View>
+                    </View>
+                    <View style={styles.emailGrid}>
+                        <Text style={{ ...globalStyles.boldText, ...styles.fieldMainTitle }}>Email Details:</Text>
+                        <View style={globalStyles.horiZontalRow}>
+                            <View style={globalColor("35")}></View>
+                        </View>
+                        <View style={styles.fieldBox}>
+                            <Text style={styles.fieldTitle}>dhpradeep25@gmail.com</Text>
+                            <MaterialCommunityIcons onPress={() => this.CopyToClipboard("dhpradeep25@gmail.com")} style={styles.messageIcon} name="content-copy" size={30} />
+                            <MaterialCommunityIcons onPress={() => this.makeMail("dhpradeep25@gmail.com")} style={styles.messageIcon} name="email" size={30} />
+                        </View>
+                        <View style={styles.fieldBox}>
+                            <Text style={styles.fieldTitle}>pdhakal@sevadev.com</Text>
+                            <MaterialCommunityIcons onPress={() => this.CopyToClipboard("pdhakal@sevadev.com")} style={styles.messageIcon} name="content-copy" size={30} />
+                            <MaterialCommunityIcons onPress={() => this.makeMail("pdhakal@sevadev.com")} style={styles.messageIcon} name="email" size={30} />
+                        </View>
+                        <View style={styles.fieldBox}>
+                            <Text style={styles.fieldTitle}>thejune23rd@gmail.com</Text>
+                            <MaterialCommunityIcons onPress={() => this.CopyToClipboard("thejune23rd@gmail.com")} style={styles.messageIcon} name="content-copy" size={30} />
+                            <MaterialCommunityIcons onPress={() => this.makeMail("thejune23rd@gmail.com")} style={styles.messageIcon} name="email" size={30} />
+                        </View>
+
                     </View>
                 </ScrollView>
             </View>
@@ -155,18 +211,23 @@ const styles = StyleSheet.create({
     },
 
     phoneGrid: {
-        height: 180,
+        height: 150,
         backgroundColor: '#fff',
     },
 
     addressGrid: {
-        height: 180,
-        backgroundColor: 'white',
+        height: 150,
+        backgroundColor: '#fff',
     },
 
     dobGrid: {
-        height: 200,
+        height: 120,
         backgroundColor: '#fff',
+    },
+
+    emailGrid: {
+        height: 200,
+        backgroundColor: '#fff'
     },
 
     imageBorder: {

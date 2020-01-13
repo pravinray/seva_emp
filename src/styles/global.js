@@ -1,5 +1,13 @@
 import { StyleSheet } from 'react-native'
 
+export const globalColor = function(width) {
+    return {
+        width: width + "%",
+        borderBottomColor: 'red', 
+        borderBottomWidth: 2
+    }
+}
+
 export const globalStyles = StyleSheet.create({
     container: {
         alignContent: 'center',
