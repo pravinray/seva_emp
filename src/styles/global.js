@@ -9,5 +9,12 @@ export const globalStyles = StyleSheet.create({
     titleText: {
         fontSize: 18,
         color: '#333'
+    },
+    horiZontalRow: {
+        borderBottomColor: '#ddd',
+        borderBottomWidth: 1
+    },
+    boldText: {
+        fontWeight: 'bold'
     }
 })
