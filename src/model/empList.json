@@ -7,7 +7,7 @@
             "personal_number": 9846751280,
             "work_number": 9846751280
         },
-        "date_of_birth":{
+        "date_of_birth": {
             "year": 1998,
             "month": 6,
             "day": 23
@@ -22,5 +22,28 @@
             "Seva App"
         ]
 
+    },
+    {
+        "id": 2,
+        "first_name": "Pravin",
+        "last_name": "Ray",
+        "contact_no": {
+            "personal_number": 9804852216,
+            "work_number": 9804852216
+        },
+        "date_of_birth": {
+            "year": 1993,
+            "month": 12,
+            "day": 25
+        },
+        "address": {
+            "permanent": "Janakpur",
+            "temporary": "Kapan, Kathmandu"
+        },
+        "job_title": "Software engineer",
+        "current_project": [
+            "Viridian Edge",
+            "Seva App"
+        ]
     }
 ]
