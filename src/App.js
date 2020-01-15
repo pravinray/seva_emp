@@ -12,7 +12,6 @@ import {
   Text
 } from 'react-native';
 
-import Index from './components/index'
 import Navigator from './routes/router'
 
 const App: () => React$Node = () => {

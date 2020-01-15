@@ -6,16 +6,16 @@ import {
     Image
 } from 'react-native'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-import { Config } from '../../common/config'
+import { Config } from '../../services/config'
 import { ScrollView } from 'react-native-gesture-handler'
 import { globalStyles } from '../../styles/global'
 
-import PhoneGrid from '../../common/phoneGrid'
-import AddressGrid from '../../common/addressGrid'
-import EmailGrid from '../../common/emailGrid'
-import { ContactHeader } from '../../common/header'
+import PhoneGrid from '../../components/phoneGrid'
+import AddressGrid from '../../components/addressGrid'
+import EmailGrid from '../../components/emailGrid'
+import { ContactHeader } from '../../components/header'
 
-let contacts = require('../../model/empList.json')
+let contacts = require('../../services/empList.json')
 
 export default class ContactDetails extends Component {
     constructor(props) {
