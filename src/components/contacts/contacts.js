@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
-import Header from '../../common/header'
+import { Header } from '../../common/header'
 
-export default function Contact() {
-    return (
-        <View>
-            <Header title="Contact" />
-            <Text>Contact default page setup</Text>
-        </View>
-    )
+export default class Contact extends Component {
+    render() {
+        return (
+            <View>
+                <Header title="Contact" />
+                <Text>Contact default page setup</Text>
+            </View>
+        )
+    }
 }
