@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import { StyleSheet, View, Text, Linking } from 'react-native'
-import { globalStyles } from '../styles/global'
-
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 export default class AddressGrid extends Component {
 

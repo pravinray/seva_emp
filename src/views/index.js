@@ -3,8 +3,8 @@ import { View, Text, Image } from 'react-native'
 
 import { globalStyles } from '../styles/global'
 
-import { Header } from '../common/header'
-import { Config } from '../common/config'
+import { Header } from '../components/header'
+import { Config } from '../services/config'
 
 export default class Index extends Component {
     render() {

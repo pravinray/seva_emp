@@ -4,9 +4,9 @@ import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 import Icon from 'react-native-vector-icons/Ionicons'
 
-import Home from '../components/index'
-import Contact from '../components/contacts/contacts'
-import ContactDetails from '../components/contactDetail/contactDetail'
+import Home from '../views/index'
+import Contact from '../views/contacts/contacts'
+import ContactDetails from '../views/contactDetail/contactDetail'
 
 
 const RootNavigator = createBottomTabNavigator(
