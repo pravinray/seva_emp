@@ -1,15 +1,21 @@
 import React, {PureComponent} from 'react';
 import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
+const empList = require('../../model/empList.json');
 
-export default class EmpItem extends PureComponent {
+export default class EmployeeItem extends PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      first_name: '',
+      last_name: '',
+      job_title: '',
+    };
   }
 
   render() {
     const {first_name, last_name, job_title} = this.props.item;
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={this.props.onItemClick}>
         <View style={styles.container}>
           <Image
             source={require('../../assets/seva.png')}

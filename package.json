@@ -17,16 +17,19 @@
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "~0.11.7",
     "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^2.0.15",
     "react-navigation-tabs": "^2.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
     "@react-native-community/eslint-config": "^0.0.5",
+    "@react-native-community/masked-view": "^0.1.6",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "react-native-safe-area-context": "^0.6.2",
     "react-test-renderer": "16.9.0"
   },
   "jest": {

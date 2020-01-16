@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent, Component } from 'react'
 import {
     StyleSheet,
     View,
@@ -16,7 +16,7 @@ import { Config } from '../../common/config'
 import { ScrollView } from 'react-native-gesture-handler'
 import { globalStyles, globalColor } from '../../styles/global'
 
-class ContactDetails extends Component {
+class ContactDetails extends PureComponent {
 
     makeCall = (num) => {
         let phoneNumber = ''

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { createAppContainer } from 'react-navigation'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { createStackNavigator } from 'react-navigation-stack'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import Home from '../components/index'
@@ -51,4 +52,10 @@ const RootNavigator = createBottomTabNavigator(
 
 );
 
-export default createAppContainer(RootNavigator)
+const AppNavigator = createStackNavigator({
+    EmployeeDetail: {
+        screen: ContactDetails,
+    }
+});
+
+export default createAppContainer(RootNavigator, AppNavigator)
