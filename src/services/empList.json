@@ -4,16 +4,17 @@
         "first_name": "Pradip",
         "last_name": "Dhakal",
         "contact_no": {
+            "country_code": "+977",
             "personal_number": 9846751280,
             "work_number": 9846751280
         },
         "date_of_birth":{
             "year": 1998,
-            "month": 6,
+            "month": "Jun",
             "day": 23
         },
         "address": {
-            "permanent": "Pokhara",
+            "permanent": "Ratnachowk, Pokhara",
             "temporary": "Chabahil, Kathmandu"
         },
         "job_title": "Software engineer",
@@ -21,7 +22,7 @@
             "S2S",
             "Seva App"
         ],
-        "img_src": "file.seva.com/assets/images/pradip-dhakal.jpg",
+        "img_src": "../../assets/images/profile_pic.jpg",
         "email": [
             "dhpradeep25@gmail.com",
             "pdhakal@sevadev.com"
