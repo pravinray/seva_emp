@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import React, {Component} from 'react';
+import {View, Text} from 'react-native';
 
-import { Header } from '../../components/header'
+import {Header} from '../../components/header';
+import SearchBar from '../../components/searchBar';
 
 export default class Contact extends Component {
-    render() {
-        return (
-            <View>
-                <Header title="Contact" />
-                <Text>Contact default page setup</Text>
-            </View>
-        )
-    }
+  render() {
+    return (
+      <View>
+        <Header title="Contact" />
+
+        <SearchBar />
+      </View>
+    );
+  }
 }
