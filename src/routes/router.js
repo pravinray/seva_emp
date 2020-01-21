@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import Home from '../views/index';
 import Contact from '../views/contacts/contacts';
-import ContactDetails from '../views/contactDetail/contactDetail';
+import ContactDetails from '../views/contacts/contactDetail/contactDetail';
 
 const RootNavigator = createBottomTabNavigator(
   {

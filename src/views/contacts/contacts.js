@@ -37,8 +37,21 @@ export default class Contact extends Component {
     });
   };
 
-  _onItemClick = id => {
-    this.props.navigation.navigate('ContactDetails', {id});
+  renderHeader = () => {
+    return (
+      <SearchBar
+        placeholder="Type Here..."
+        lightTheme
+        round
+        onChangeText={text => this.searchFilterFunction(text)}
+        autoCorrect={false}
+        value={this.state.value}
+      />
+    );
+  };
+
+  _onItemClick = item => {
+    this.props.navigation.navigate('ContactDetails', {item});
   };
 
   render() {
@@ -54,24 +67,14 @@ export default class Contact extends Component {
     return (
       <View style={{flex: 1}}>
         <Header title="Contact" />
-        <SearchBar
-          placeholder="Type Here..."
-          lightTheme
-          round
-          onChangeText={text => this.searchFilterFunction(text)}
-          autoCorrect={false}
-          value={this.state.value}
-        />
         <FlatList
           data={value ? data : empList}
           renderItem={({item}) => (
-            <EmpItem
-              onItemClick={() => this._onItemClick(item.id)}
-              item={item}
-            />
+            <EmpItem onItemClick={() => this._onItemClick(item)} item={item} />
           )}
           keyExtractor={item => item.id}
           ItemSeparatorComponent={this.renderSeparator}
+          ListHeaderComponent={this.renderHeader}
         />
       </View>
     );
