@@ -7,17 +7,14 @@
  */
 
 import React from 'react';
-import {
-  View,
-  Text
-} from 'react-native';
+import {View, Text} from 'react-native';
 
-import Navigator from './routes/router'
+import Navigator from './routes/router';
 
 const App: () => React$Node = () => {
   return (
     <>
-    <Navigator />
+      <Navigator />
     </>
   );
 };
