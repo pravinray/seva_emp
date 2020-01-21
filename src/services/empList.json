@@ -27,5 +27,174 @@
             "dhpradeep25@gmail.com",
             "pdhakal@sevadev.com"
         ]
+    },
+    {
+        "id": 2,
+        "first_name": "Kritarth",
+        "last_name": "Acharya",
+        "contact_no": {
+            "country_code": "+977",
+            "personal_number": 9845583877,
+            "work_number": 9845583877
+        },
+        "date_of_birth":{
+            "year": 1997,
+            "month": "Nov",
+            "day": 03
+        },
+        "address": {
+            "permanent": "Shreepur, Birgunj",
+            "temporary": "Sukedhara, Kathmandu"
+        },
+        "job_title": "Software Engineer",
+        "current_project": [
+            "Seva App",
+            "Viridian Science"
+        ],
+        "img_src": "../../assets/images/profile_pic.jpg",
+        "email": [
+            "akritartha@gmail.com",
+            "kacharya@sevadev.com"
+        ]
+    },
+    {
+        "id": 3,
+        "first_name": "Pravin",
+        "last_name": "Ray",
+        "contact_no": {
+            "country_code": "+977",
+            "personal_number": 9846751280,
+            "work_number": 9846751280
+        },
+        "date_of_birth":{
+            "year": 1998,
+            "month": "Jun",
+            "day": 23
+        },
+        "address": {
+            "permanent": "Ratnachowk, Pokhara",
+            "temporary": "Chabahil, Kathmandu"
+        },
+        "job_title": "ASS Software Engineer",
+        "current_project": [
+            "Seva App"
+        ],
+        "img_src": "../../assets/images/profile_pic.jpg",
+        "email": [
+            "dhpradeep25@gmail.com",
+            "pdhakaddl@sevadev.com"
+        ]
+    },
+    {
+        "id": 4,
+        "first_name": "Sabita",
+        "last_name": "Pandey",
+        "contact_no": {
+            "country_code": "+977",
+            "personal_number": 9846751280,
+            "work_number": 9846751280
+        },
+        "date_of_birth":{
+            "year": 1998,
+            "month": "Jun",
+            "day": 23
+        },
+        "address": {
+            "permanent": "Ratnachowk, Pokhara",
+            "temporary": "Chabahil, Kathmandu"
+        },
+        "job_title": "ASS Software Engineer",
+        "current_project": [
+            "Seva App"
+        ],
+        "img_src": "../../assets/images/profile_pic.jpg",
+        "email": [
+            "dhpradeep25@gmail.com",
+            "pdhakaddl@sevadev.com"
+        ]
+    },
+    {
+        "id": 5,
+        "first_name": "Udhbodh",
+        "last_name": "Shrestha",
+        "contact_no": {
+            "country_code": "+977",
+            "personal_number": 9846751280,
+            "work_number": 9846751280
+        },
+        "date_of_birth":{
+            "year": 1998,
+            "month": "Jun",
+            "day": 23
+        },
+        "address": {
+            "permanent": "Ratnachowk, Pokhara",
+            "temporary": "Chabahil, Kathmandu"
+        },
+        "job_title": "ASS Software Engineer",
+        "current_project": [
+            "Seva App"
+        ],
+        "img_src": "../../assets/images/profile_pic.jpg",
+        "email": [
+            "dhpradeep25@gmail.com",
+            "pdhakaddl@sevadev.com"
+        ]
+    },
+    {
+        "id": 6,
+        "first_name": "Pranish",
+        "last_name": "Bhagat",
+        "contact_no": {
+            "country_code": "+977",
+            "personal_number": 9846751280,
+            "work_number": 9846751280
+        },
+        "date_of_birth":{
+            "year": 1998,
+            "month": "Jun",
+            "day": 23
+        },
+        "address": {
+            "permanent": "Ratnachowk, Pokhara",
+            "temporary": "Chabahil, Kathmandu"
+        },
+        "job_title": "ASS Software Engineer",
+        "current_project": [
+            "Seva App"
+        ],
+        "img_src": "../../assets/images/profile_pic.jpg",
+        "email": [
+            "dhpradeep25@gmail.com",
+            "pdhakaddl@sevadev.com"
+        ]
+    },
+    {
+        "id": 7,
+        "first_name": "Kapil",
+        "last_name": "Neupane",
+        "contact_no": {
+            "country_code": "+977",
+            "personal_number": 9846751280,
+            "work_number": 9846751280
+        },
+        "date_of_birth":{
+            "year": 1998,
+            "month": "Jun",
+            "day": 23
+        },
+        "address": {
+            "permanent": "Ratnachowk, Pokhara",
+            "temporary": "Chabahil, Kathmandu"
+        },
+        "job_title": "ASS Software Engineer",
+        "current_project": [
+            "Seva App"
+        ],
+        "img_src": "../../assets/images/profile_pic.jpg",
+        "email": [
+            "dhpradeep25@gmail.com",
+            "pdhakaddl@sevadev.com"
+        ]
     }
 ]
