@@ -13,6 +13,7 @@ export default class Contact extends Component {
       loading: false,
       data: [],
       error: null,
+      value: '',
     };
   }
 
@@ -40,21 +41,10 @@ export default class Contact extends Component {
     this.props.navigation.navigate('ContactDetails', {id});
   };
 
-  renderHeader = () => {
-    return (
-      <SearchBar
-        placeholder="Type Here..."
-        lightTheme
-        round
-        onChangeText={text => this.searchFilterFunction(text)}
-        autoCorrect={false}
-        value={this.state.value}
-      />
-    );
-  };
-
   render() {
-    if (this.state.loading) {
+    const {loading, data, value} = this.state;
+    console.log(this.state);
+    if (loading) {
       return (
         <View style={styles.loading}>
           <ActivityIndicator />
@@ -64,8 +54,16 @@ export default class Contact extends Component {
     return (
       <View style={{flex: 1}}>
         <Header title="Contact" />
+        <SearchBar
+          placeholder="Type Here..."
+          lightTheme
+          round
+          onChangeText={text => this.searchFilterFunction(text)}
+          autoCorrect={false}
+          value={this.state.value}
+        />
         <FlatList
-          data={this.state.data}
+          data={value ? data : empList}
           renderItem={({item}) => (
             <EmpItem
               onItemClick={() => this._onItemClick(item.id)}
@@ -74,7 +72,6 @@ export default class Contact extends Component {
           )}
           keyExtractor={item => item.id}
           ItemSeparatorComponent={this.renderSeparator}
-          ListHeaderComponent={this.renderHeader}
         />
       </View>
     );
@@ -89,5 +86,4 @@ const styles = StyleSheet.create({
     marginLeft: '14%',
   },
   loading: {flex: 1, alignItems: 'center', justifyContent: 'center'},
-  
 });
