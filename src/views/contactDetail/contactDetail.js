@@ -3,11 +3,10 @@ import {
     StyleSheet,
     View,
     Text,
-    Image
+    Image,
+    ScrollView
 } from 'react-native'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Config } from '../../services/config'
-import { ScrollView } from 'react-native-gesture-handler'
 import { globalStyles } from '../../styles/global'
 
 import PhoneGrid from '../../components/phoneGrid'
@@ -15,15 +14,16 @@ import AddressGrid from '../../components/addressGrid'
 import EmailGrid from '../../components/emailGrid'
 import { ContactHeader } from '../../components/header'
 
-let contacts = require('../../services/empList.json')
-
 export default class ContactDetails extends Component {
+
     constructor(props) {
         super(props)
     }
+
     render() {
+        const { item } = this.props.navigation.state.params
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container} onWillFocus={this._scrollToTop}>
                 <ContactHeader navigation={this.props.navigation} />
                 <ScrollView style={styles.body}>
                     <View style={styles.profilePictureGrid}>
@@ -35,19 +35,19 @@ export default class ContactDetails extends Component {
                         </View>
                     </View>
                     <View style={styles.nameGrid}>
-                        <Text style={styles.userName}>{(contacts[0].first_name + ' ' + contacts[0].last_name).toUpperCase()}</Text>
-                        <Text style={styles.userPost}>{contacts[0].job_title}</Text>
+                        <Text style={styles.userName}>{(item.first_name + ' ' + item.last_name).toUpperCase()}</Text>
+                        <Text style={styles.userPost}>{item.job_title}</Text>
                     </View>
                     <View style={styles.phoneGrid}>
                         <Text style={{ ...globalStyles.boldText, ...styles.fieldMainTitle }}>Phone Number Details:</Text>
                         <View style={globalStyles.horiZontalRow} />
                         <PhoneGrid
                             fieldTitle="Work Number: "
-                            fieldValue={contacts[0].contact_no.country_code + "-" + contacts[0].contact_no.work_number} 
+                            fieldValue={item.contact_no.country_code + "-" + item.contact_no.work_number} 
                         />
                         <PhoneGrid
                             fieldTitle="Personal Number: "
-                            fieldValue={contacts[0].contact_no.country_code + "-" + contacts[0].contact_no.personal_number} 
+                            fieldValue={item.contact_no.country_code + "-" + item.contact_no.personal_number} 
                         />
                     </View>
                     <View style={styles.addressGrid}>
@@ -55,11 +55,11 @@ export default class ContactDetails extends Component {
                         <View style={globalStyles.horiZontalRow} />
                         <AddressGrid 
                             fieldTitle="Permanent Address" 
-                            fieldValue={contacts[0].address.permanent} 
+                            fieldValue={item.address.permanent} 
                         />
                         <AddressGrid 
                             fieldTitle="Temporary Address" 
-                            fieldValue={contacts[0].address.temporary} 
+                            fieldValue={item.address.temporary} 
                         />
                     </View>
                     <View style={styles.dobGrid}>
@@ -68,21 +68,21 @@ export default class ContactDetails extends Component {
                         </View>
                         <View style={styles.fieldBox}>
                             <Text style={styles.dobFieldTitle}>Date of Birth:</Text>
-                            <Text style={styles.dobFieldValue}>{contacts[0].date_of_birth.day} / {contacts[0].date_of_birth.month} / {contacts[0].date_of_birth.year}</Text>
+                            <Text style={styles.dobFieldValue}>{item.date_of_birth.day} / {item.date_of_birth.month} / {item.date_of_birth.year}</Text>
                         </View>
                     </View>
                     <View style={styles.emailGrid}>
                         <Text style={{ ...globalStyles.boldText, ...styles.fieldMainTitle }}>Email Details:</Text>
                         <View style={globalStyles.horiZontalRow} />
                         <EmailGrid 
-                            fieldValue={contacts[0].email[0]}
+                            fieldValue={item.email[0]}
                         />
                         <EmailGrid 
-                            fieldValue={contacts[0].email[1]}
+                            fieldValue={item.email[1]}
                         />
                     </View>
                 </ScrollView>
-            </View>
+            </ScrollView>
         )
     }
 }

@@ -11,8 +11,8 @@ export default class Contact extends Component {
     super(props);
   }
 
-  _onItemClick = (id) => {
-    this.props.navigation.navigate('ContactDetails', {id})
+  _onItemClick = (item) => {
+    this.props.navigation.navigate('ContactDetails', {item})
   }
 
   render() {
@@ -21,7 +21,7 @@ export default class Contact extends Component {
          <Header title="Contact" />
         <FlatList
           data={empList}
-          renderItem={({item}) => <EmpItem onItemClick={() => this._onItemClick(item.id)} item={item} />}
+          renderItem={({item}) => <EmpItem onItemClick={() => this._onItemClick(item)} item={item} />}
           keyExtractor={item => item.id}
         />
       </View>
