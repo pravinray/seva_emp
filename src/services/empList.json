@@ -8,13 +8,13 @@
             "personal_number": 9846751280,
             "work_number": 9846751280
         },
-        "date_of_birth":{
+        "date_of_birth": {
             "year": 1998,
-            "month": "Jun",
+            "month": 6,
             "day": 23
         },
         "address": {
-            "permanent": "Ratnachowk, Pokhara",
+            "permanent": "Pokhara",
             "temporary": "Chabahil, Kathmandu"
         },
         "job_title": "Software engineer",
@@ -22,10 +22,40 @@
             "S2S",
             "Seva App"
         ],
-        "img_src": "../../assets/images/profile_pic.jpg",
+        "img_src": "file.seva.com/assets/images/pradip-dhakal.jpg",
         "email": [
             "dhpradeep25@gmail.com",
             "pdhakal@sevadev.com"
+        ]
+
+    },
+    {
+        "id": 2,
+        "first_name": "Pravin",
+        "last_name": "Ray",
+        "contact_no": {
+            "country_code": "+977",
+            "personal_number": 9804852216,
+            "work_number": 9804852216
+        },
+        "date_of_birth": {
+            "year": 1993,
+            "month": 12,
+            "day": 25
+        },
+        "address": {
+            "permanent": "Janakpur",
+            "temporary": "Kapan, Kathmandu"
+        },
+        "job_title": "Software engineer",
+        "current_project": [
+            "Viridian Edge",
+            "Seva App"
+        ],
+        "img_src": "",
+        "email": [
+            "pravinray43@gmail.com",
+            "pray@sevadev.com"
         ]
     }
 ]
